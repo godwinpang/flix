@@ -20,6 +20,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -48,7 +49,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
-                self.activityIndicator.stopAnimating()
+                //self.activityIndicator.stopAnimating()
             }
         }
         task.resume()
@@ -73,6 +74,15 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         cell.posterImageView.af_setImage(withURL: posterURL)
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
