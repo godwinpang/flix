@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epG-i9-Xc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1443.75" y="28.52112676056338"/>
+            <point key="canvasLocation" x="1491" y="29"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="ujH-g2-C3A">
@@ -157,6 +157,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ksU-jF-SPs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0AP-JQ-g8b">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -169,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="-553.125" y="28.52112676056338"/>
         </scene>
-        <!--Superhero View Controller-->
+        <!--Superhero-->
         <scene sceneID="e3T-dR-LHm">
             <objects>
                 <viewController id="2D7-BW-vpd" customClass="SuperheroViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,28 +182,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pDa-oD-bKZ">
-                                    <size key="itemSize" width="155" height="189"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pDa-oD-bKZ">
+                                    <size key="itemSize" width="160" height="189"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PosterCell" reuseIdentifier="PosterCell" id="lA7-t5-mMH" customClass="PosterCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="189"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="189"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="189"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVz-du-IU0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="189"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVz-du-IU0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="189"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="FVz-du-IU0" id="13L-mJ-MDf"/>
+                                            <segue destination="Za5-Ou-dv6" kind="show" id="OSe-Kw-R4J"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -211,7 +213,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Upr-pY-zLT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vha-fc-rhb"/>
+                    <navigationItem key="navigationItem" title="Superhero" id="Vha-fc-rhb"/>
                     <connections>
                         <outlet property="collectionView" destination="AKs-Pj-2b9" id="IB1-RR-CtL"/>
                     </connections>
@@ -219,6 +221,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duU-bh-jZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="142.5" y="715.14084507042253"/>
+        </scene>
+        <!--Superhero Detailed View Controller-->
+        <scene sceneID="Lsd-ZV-NbH">
+            <objects>
+                <viewController id="Za5-Ou-dv6" customClass="SuperheroDetailedViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YbD-CV-A4S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oA0-gd-LJb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0af-5J-OEv">
+                                <rect key="frame" x="16" y="226" width="75" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Superman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNy-3y-GMb">
+                                <rect key="frame" x="113" y="299" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-gc-ASd">
+                                <rect key="frame" x="113" y="328" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5q-Gu-I17">
+                                <rect key="frame" x="16" y="370" width="288" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="XoD-zp-1d2"/>
+                    </view>
+                    <connections>
+                        <outlet property="backDropImageView" destination="oA0-gd-LJb" id="sgV-Cg-k9N"/>
+                        <outlet property="overviewLabel" destination="C5q-Gu-I17" id="0Wu-1H-X5O"/>
+                        <outlet property="posterImageView" destination="0af-5J-OEv" id="O8L-QV-h0M"/>
+                        <outlet property="releaseDateLabel" destination="D4g-gc-ASd" id="rPT-Ib-ldB"/>
+                        <outlet property="titleLabel" destination="rNy-3y-GMb" id="iPf-EL-SqM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Upt-oc-sff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817.5" y="715.14084507042253"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="4W9-KT-03K">
