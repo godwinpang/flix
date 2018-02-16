@@ -15,6 +15,7 @@
 		5A28389F202987CC00BBBA48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A28389D202987CC00BBBA48 /* LaunchScreen.storyboard */; };
 		5A2838AA202987CC00BBBA48 /* flixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2838A9202987CC00BBBA48 /* flixTests.swift */; };
 		5A2838B5202987CC00BBBA48 /* flixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2838B4202987CC00BBBA48 /* flixUITests.swift */; };
+		5AB7F73E2032880400C2C217 /* SuperheroDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7F73D2032880400C2C217 /* SuperheroDetailedViewController.swift */; };
 		5AF133C2202A7E3600190CD7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF133C1202A7E3600190CD7 /* DetailViewController.swift */; };
 		5AF133C4202A872B00190CD7 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF133C3202A872B00190CD7 /* PosterCell.swift */; };
 		5AF133C6202A87BF00190CD7 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF133C5202A87BF00190CD7 /* SuperheroViewController.swift */; };
@@ -56,6 +57,7 @@
 		5A2838B0202987CC00BBBA48 /* flixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2838B4202987CC00BBBA48 /* flixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flixUITests.swift; sourceTree = "<group>"; };
 		5A2838B6202987CC00BBBA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB7F73D2032880400C2C217 /* SuperheroDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroDetailedViewController.swift; sourceTree = "<group>"; };
 		5AF133C1202A7E3600190CD7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5AF133C3202A872B00190CD7 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		5AF133C5202A87BF00190CD7 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				5AFCBF3520298AB800C2EDFF /* NowPlayingViewController.swift */,
 				5AF133C1202A7E3600190CD7 /* DetailViewController.swift */,
 				5AF133C5202A87BF00190CD7 /* SuperheroViewController.swift */,
+				5AB7F73D2032880400C2C217 /* SuperheroDetailedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFCBF3620298AB800C2EDFF /* NowPlayingViewController.swift in Sources */,
+				5AB7F73E2032880400C2C217 /* SuperheroDetailedViewController.swift in Sources */,
 				5AF133C4202A872B00190CD7 /* PosterCell.swift in Sources */,
 				5AF133C6202A87BF00190CD7 /* SuperheroViewController.swift in Sources */,
 				5A283895202987CC00BBBA48 /* AppDelegate.swift in Sources */,

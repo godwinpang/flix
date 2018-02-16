@@ -26,6 +26,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         tableView.insertSubview(refreshControl, at: 0)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         fetchMovies()
         activityIndicator.stopAnimating()
     }
@@ -69,6 +71,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         let baseURLString = "https://image.tmdb.org/t/p/w500"
         let posterURL = URL(string: baseURLString + posterPathString)!
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         cell.posterImageView.af_setImage(withURL: posterURL)
