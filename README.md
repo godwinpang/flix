@@ -123,11 +123,11 @@ It was challenging to understand the push segue and how exactly data was passed 
     See the License for the specific language governing permissions and
     limitations under the License.
 
-# Lab 3 - *Name of App Here*
+# Lab 3 - *Flix*
 
-**Name of your app** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## User Stories
 
